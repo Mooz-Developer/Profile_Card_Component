@@ -1,0 +1,136 @@
+/* Start Global Rules */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* End Global Rules */
+
+.container{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    font-family: "Kumbh Sans", Tahoma;
+    font-size: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Start Background Style */
+.background{
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    background-color: hsl(185, 75%, 39%);
+}
+
+.background img{
+    position: absolute;
+    max-width: 100%;
+}
+.background img:first-of-type{
+    top: 0;
+    left: 0;
+    transform: translate(-25%, -50%);
+}
+.background img:last-of-type{
+    bottom: 0;
+    right: 0;
+    transform: translate(15%, 55%);
+}
+
+@media (max-width:420px) {
+    .background img{
+        width: 130%;
+        max-width: 130%;
+    } 
+    .background img:first-of-type{
+        transform: translate(-50%, -45%);
+    }
+    .background img:last-of-type{
+        transform: translate(50%, 45%);
+    }
+}
+/* End Background Style */
+
+/* Start Card Style */
+main{
+    background-color: #fff;
+    border-radius: 25px;
+    overflow: hidden;
+
+    width: 450px;
+    max-width: 95%;
+}
+
+main > *{
+    display: block;
+}
+
+h2{
+    color:hsl(229, 23%, 23%)
+}
+
+span{
+    color:hsl(227, 10%, 46%);
+}
+
+/* Avatar Section */
+.cover{
+    width: 100%;
+    min-height: 100px;
+}
+.avatar{
+    border-radius: 50%;
+    border: solid #fff 5px;
+    margin-left: 50%;
+    margin-top: -50px;
+    transform: translateX(-50%);
+}
+
+/* User-Data Section*/
+.user-data{
+    text-align: center;
+    margin: 1em 0 2em;
+}
+
+.user-data .first-line{
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+.user-data .first-line h2{
+    display: inline-block;
+    margin-right: 0.5em;
+}
+
+.user-data .first-line span,
+.user-data .second-line{
+    font-size: 1.2em;
+}
+
+/* Activities Section */
+.activities{
+    border-top: solid #eee 2px;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2em 0;
+    justify-content: space-evenly;
+}
+
+.activities .activity{
+    text-align: center;
+}
+
+.activities .activity span{
+    line-height: 2;
+}
+
+/* End Card Style */
